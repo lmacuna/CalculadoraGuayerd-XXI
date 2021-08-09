@@ -74,8 +74,8 @@ line-height: 80px;
 
 border-radius: 11px;
 margin-bottom: 50px !important;
-/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-font-family: cursive;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+/* font-family: cursive; */
 font-weight: bold;
 text-shadow: 5px 5px 5px grey;
 background: whitesmoke;
