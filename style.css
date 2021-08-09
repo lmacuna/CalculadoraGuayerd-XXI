@@ -1,0 +1,88 @@
+.calculadora{
+    height: 450px;
+    border: 3px solid  #3c3c3d  ;
+    border-radius: 25px;
+    width: 270px !important;
+    text-align: center;
+    /*background: hsl(210, 3%, 75%);   fallback for old browsers */
+    background: black;
+    margin: 0 auto;
+    padding : 10px;
+    margin-top: 20px;
+    text-shadow: 25px 25px 25px black;
+}
+.calculadora td button{
+
+ height: 45px !important;
+ width:65px !important;
+ margin-bottom:15px !important;   
+ font-size: 18px !important;
+ font-family:sans-serif !important;
+ font-weight: bold !important;
+ text-align: center !important;
+ padding: 3px !important;
+ background: #5f84ac !important;
+ border: 2px solid black;
+border-radius: 11px !important;
+}
+.calculadora td button:hover{
+    background: rgb(216, 216, 216) !important;
+    color:#919191 !important;
+   /*  border:2px solid grey; */
+}
+.calculadora td button:active{
+    background: white !important;
+    color:white !important;
+    text-shadow: 1px 1px 1px black !important;
+    /* border:2px solid lightslategrey; */
+}
+
+
+.pantalla{
+
+border:3px solid black;
+padding: 10px;
+width:300px;
+display: block;
+text-align: center;
+font-size: 40px;
+margin-top: 20px !important;
+height: 80px;
+line-height: 80px;
+background: rgb(94, 94, 94);
+border-radius: 11px;
+margin-bottom: 50px !important;
+font-family: cursive;
+font-weight: bold;
+text-shadow: 5px 5px 5px grey;
+
+}
+body{
+   /*  background: lightslategrey; */
+   background:#000069;
+}
+.power{
+border:3px solid rgb(7, 6, 6);
+padding: 10px;
+width:300px;
+display: block;
+text-align: right;
+font-size: 40px;
+margin-top: 20px !important;
+height: 80px;
+line-height: 80px;
+
+border-radius: 11px;
+margin-bottom: 50px !important;
+/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+font-family: cursive;
+font-weight: bold;
+text-shadow: 5px 5px 5px grey;
+background: whitesmoke;
+}
+.blocke{
+    display: inline-block;
+}
+.on{
+    background: #a01515 !important;
+}

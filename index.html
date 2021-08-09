@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+</head>
+<body>
+    <table class="calculadora">
+        <tr><td><span style="color: #fddaaf;font-size: 14px;">GUAYERD</span></td>
+        <td><span style="color: bisque;font-size: 14px;">XXI</span></td><td></td><td></td>
+        </tr>
+        <tr>
+            
+            <td colspan="4"><span class="pantalla"  id="resultado"></span></td>
+
+            
+        </tr>
+        
+       <tr>
+
+        <td>
+            <button style="background:#a01515 !important;" class="on" onclick="encender()">ON</button>
+        </td>
+            <td></td><td></td>
+           <td><button style="background: darkblue !important;" onclick="apagar()">OFF</button></td> 
+         
+
+       </tr>
+        <tr>
+
+            <td><button class="btn" id="porcentaje">%</button></td>
+            <td><button class="btn" id="potencia">x²</button></td>
+            <td><button class="btn" id="raiz">&radic;n</button></td>
+            <td><button onclick="simbolo(id)" id="/">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num7(id)" class="btn" id="7">7</button></td>
+            <td><button onclick="num8(id)" class="btn" id="8">8</button></td>
+            <td><button onclick="num9(id)" class="btn" id="9">9</button></td>
+            <td><button onclick="simbolo(id)"  id="x">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num4(id)" class="btn" id="4">4</button></td>
+            <td><button onclick="num5(id)" class="btn" id="5">5</button></td>
+            <td><button onclick="num6(id)" class="btn" id="6">6</button></td>
+            <td><button onclick="simbolo(id)" class="btn" id="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num1(id)" class="btn" id="1">1</button></td>
+            <td><button onclick="num2(id)" class="btn" id="2">2</button></td>
+            <td><button onclick="num3(id)" class="btn" id="3">3</button></td>
+            <td><button onclick="simbolo(id)" class="btn" id="+">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="borrar()" class="btn" id="borrar">C</button></td>
+            <td><button onclick="num0(id)" class="btn" id="0">0</button></td>
+            <td><button onclick="simbolo(id)" id=",">,</button></td>
+            <td><button onclick="operacion(id)" class="btn" id="igual">=</button></td>
+        </tr>
+    
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
