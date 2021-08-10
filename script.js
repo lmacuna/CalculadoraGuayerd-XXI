@@ -1,73 +1,81 @@
+let start;
 const num7 = (id)=>{let numero =document.querySelectorAll("button")
-for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n7=parseFloat(document.querySelector("#resultado").innerText+=id);
+    for(let i =0;i<numero.length;i++){
+            if(id===numero[i].id&&start===true){
+                n7=document.querySelector("#resultado").innerText+=id;
+            }
     }
 }
 
-}
 
 const num8 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n8=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n8=document.querySelector("#resultado").innerText+=id;
     }
 }
 
 }
 const num9 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n9=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n9=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num4 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n4=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n4=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num5 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n5=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n5=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num6 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n6=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n6=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num1 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n1=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n1=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num2 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n2=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n2=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num3 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n3=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n3=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
 const num0 = (id)=>{let numero =document.querySelectorAll("button")
 for(let i =0;i<numero.length;i++){
-    if(id===numero[i].id){
-        n0=parseFloat(document.querySelector("#resultado").innerText+=id);
+    if(id===numero[i].id&&start===true){
+        n0=document.querySelector("#resultado").innerText+=id;
+    }
+}
+}
+const num = (id)=>{let numero =document.querySelectorAll("button")
+for(let i =0;i<numero.length;i++){
+    if(id===numero[i].id&&start===true){
+        n=document.querySelector("#resultado").innerText+=id;
     }
 }
 }
@@ -76,7 +84,7 @@ for(let i =0;i<numero.length;i++){
 
 const simbolo=(id)=>{let op= document.querySelectorAll("button")
 for(let i=0;i<op.length;i++){
-    if(id===op[i].id){
+    if(id===op[i].id&&start===true){
        simb= document.querySelector("#resultado").innerText+=id;
     }
 }
@@ -94,7 +102,7 @@ const operacion=()=>{
             
             if(datos[i]==="+"||datos[i]==="-"||datos[i]==="x"||datos[i]==="/"){
                 break;
-            } 
+            }
                 n1+=datos[i];   
                    
         }
@@ -109,7 +117,8 @@ const operacion=()=>{
 
         }
         
-            
+           n1=parseFloat(n1);
+           n2=parseFloat(n2); 
 
        
                     
@@ -119,16 +128,16 @@ const operacion=()=>{
               if(datos[i]==="+"){
                 
                 
-                 let r=parseInt(n1)+parseInt(n2);
-                  return document.querySelector("#resultado").innerText=r;
+                 let r=parseFloat(n1)+parseFloat(n2);
+                  return document.querySelector("#resultado").innerText=parseFloat(r);
               }else if(datos[i]==="-"){
-                  let r =parseInt(n1)-parseInt(n2);
+                  let r =parseFloat(n1)-parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r;
               }else if(datos[i]==="x"){
-                  let r =parseInt(n1)*parseInt(n2);
+                  let r =parseFloat(n1)*parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r;
               }else if(datos[i]==="/"){
-                  let r =parseInt(n1)/parseInt(n2);
+                  let r =parseFloat(n1)/parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2);
               }
               console.log(n1)
@@ -140,18 +149,23 @@ const operacion=()=>{
  
 const borrar =()=>document.querySelector("#resultado").innerText="";n1=0;n2=0;
 
-const encender=()=>{
-      
-        console.log(document.querySelector(".pantalla").classList.replace("pantalla","power"))
-        
-    }
+
    
 const apagar=()=>{
-      
+  
     console.log(document.querySelector(".power").classList.replace("power","pantalla"));borrar();
+     start=false;
         
 }  
-                
+              
+   
+const encender=(id)=>{
+      let estado = document.querySelectorAll("button")
+      for(let i=0;i<estado.length;i++){
+          if(estado[i].id===id){
+            console.log(document.querySelector(".pantalla").classList.replace("pantalla","power"));start=true;
+          }
+      }
     
-
+}
 

@@ -23,10 +23,10 @@
        <tr>
 
         <td>
-            <button style="background:#a01515 !important;" class="on" onclick="encender()">ON</button>
+            <button style="background:#a01515 !important;"id="encendido" class="on" onclick="encender(id)">ON</button>
         </td>
             <td></td><td></td>
-           <td><button style="background: darkblue !important;" onclick="apagar()">OFF</button></td> 
+           <td><button style="background: darkblue !important;"id="apagado" onclick="apagar()">OFF</button></td> 
          
 
        </tr>
@@ -58,7 +58,7 @@
         <tr>
             <td><button onclick="borrar()" class="btn" id="borrar">C</button></td>
             <td><button onclick="num0(id)" class="btn" id="0">0</button></td>
-            <td><button onclick="simbolo(id)" id=",">,</button></td>
+            <td><button onclick="num(id)" id=",">,</button></td>
             <td><button onclick="operacion(id)" class="btn" id="igual">=</button></td>
         </tr>
     
