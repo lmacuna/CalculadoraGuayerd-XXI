@@ -129,13 +129,13 @@ const operacion=()=>{
                 
                 
                  let r=parseFloat(n1)+parseFloat(n2);
-                  return document.querySelector("#resultado").innerText=parseFloat(r);
+                  return document.querySelector("#resultado").innerText=r.toFixed(2);
               }else if(datos[i]==="-"){
                   let r =parseFloat(n1)-parseFloat(n2);
-                  return document.querySelector("#resultado").innerText=r;
+                  return document.querySelector("#resultado").innerText=r.toFixed(2);
               }else if(datos[i]==="x"){
                   let r =parseFloat(n1)*parseFloat(n2);
-                  return document.querySelector("#resultado").innerText=r;
+                  return document.querySelector("#resultado").innerText=r.toFixed(2);
               }else if(datos[i]==="/"){
                   let r =parseFloat(n1)/parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2);
