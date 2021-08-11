@@ -188,7 +188,7 @@ const memoria=()=>{let dato=document.querySelector("#resultado").innerText
           
       }
      else if(dato.length!==0&&localStorage.getItem("dato")===null&&start===true){
-       dato=localStorage.setItem("dato","MR "+dato);borrar()
+       dato=localStorage.setItem("dato","M "+dato);borrar()
       }else if(dato.length!==0&&localStorage.getItem("dato")!==null&&start===true){
           document.querySelector("#resultado").innerText="Memoria llena";
       }
