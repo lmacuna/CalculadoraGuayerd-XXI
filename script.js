@@ -150,7 +150,7 @@ const operacion=()=>{
                   let r=Math.sqrt(n1);
                   return document.querySelector("#resultado").innerText=r.toFixed(2);
               }else if(datos[i]==='n'){
-                  let r =Math.pow(n1,2);
+                  let r =Math.pow(n1,n2||2);
                   return document.querySelector("#resultado").innerText=r;
               }
               console.log(n1)
