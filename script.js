@@ -90,7 +90,7 @@ for(let i =0;i<numero.length;i++){
 const simbolo=(id)=>{let op= document.querySelectorAll("button")
 
 for(let i=0;i<op.length;i++){
-    if(id===op[i].id&&start===true&&(id==="R"||id==="n")){
+    if(id===op[i].id&&start===true&&(id==="R"||id==="n"||id==="x"||id==="+"||id==="-"||id==="/")){
        simb= document.querySelector("#resultado").innerText+=id;
     }
 }
@@ -106,7 +106,7 @@ const operacion=()=>{
     
         for(let i =0;i<datos.length;i++){
             
-            if(datos[i]==="+"||datos[i]==="-"||datos[i]==="x"||datos[i]==="/"||datos[i]==='R'||datos[i]==='n²'){
+            if(datos[i]==="+"||datos[i]==="-"||datos[i]==="x"||datos[i]==="/"||datos[i]==='R'||datos[i]==='n'){
                 break;
             }
                 n1+=datos[i];   
@@ -115,7 +115,7 @@ const operacion=()=>{
         for(let j =n1.length+1;j<datos.length;j++){
             
           
-            if(datos[j]!=="+"||datos[j]!=="-"||datos[j]!=="x"||datos[j]!=="/"||datos[i]!=="R"||datos[i]!=="n²"){
+            if(datos[j]!=="+"||datos[j]!=="-"||datos[j]!=="x"||datos[j]!=="/"||datos[i]!=="R"||datos[i]!=="n"){
                 
                 n2+=datos[j];
             }
