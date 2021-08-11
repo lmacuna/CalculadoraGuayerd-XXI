@@ -170,13 +170,13 @@ const encender=(id)=>{
 }
 
 const memoria=()=>{let dato=document.querySelector("#resultado").innerText
-      if(dato.length===0){
+      if(dato.length===0&&start===true){
           document.querySelector("#resultado").innerText="E";
           
       }
-     else if(dato.length!==0&&localStorage.getItem("dato")===null){
+     else if(dato.length!==0&&localStorage.getItem("dato")===null&&start===true){
        dato=localStorage.setItem("dato",dato);
-      }else if(dato.length!==0&&localStorage.getItem("dato")!==null){
+      }else if(dato.length!==0&&localStorage.getItem("dato")!==null&&start===true){
           document.querySelector("#resultado").innerText="Memoria llena";
       }
 }
