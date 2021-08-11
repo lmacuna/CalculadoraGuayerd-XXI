@@ -170,16 +170,22 @@ const encender=(id)=>{
 }
 
 const memoria=()=>{let dato=document.querySelector("#resultado").innerText
-      if(localStorage.getItem("dato")===null){
+      if(dato.length===0){
+          document.querySelector("#resultado").innerText="E";
+          
+      }
+     else if(dato.length!==0&&localStorage.getItem("dato")===null){
        dato=localStorage.setItem("dato",dato);
-      }else{
+      }else if(dato.length!==0&&localStorage.getItem("dato")!==null){
           document.querySelector("#resultado").innerText="Memoria llena";
       }
 }
 const recuperarDato=()=>{
     let dato =localStorage.getItem("dato")
-    if(start===true){
+    if(start===true&&localStorage.getItem("dato")!==null){
     document.querySelector("#resultado").innerText=dato;
+    }if(start===true&&localStorage.getItem("dato")===null){
+        document.querySelector("#resultado").innerText="Vacio";
     }
 }
 const restablecer=()=>{
