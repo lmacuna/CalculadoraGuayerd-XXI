@@ -169,3 +169,23 @@ const encender=(id)=>{
     
 }
 
+const memoria=()=>{let dato=document.querySelector("#resultado").innerText
+      if(localStorage.getItem("dato")===null){
+       dato=localStorage.setItem("dato",dato);
+      }else{
+          document.querySelector("#resultado").innerText="Memoria llena";
+      }
+}
+const recuperarDato=()=>{
+    let dato =localStorage.getItem("dato")
+    if(start===true){
+    document.querySelector("#resultado").innerText=dato;
+    }
+}
+const restablecer=()=>{
+    if(start===true){
+        dato=localStorage.getItem("dato");    
+        localStorage.removeItem("dato",dato);
+        document.querySelector("#resultado").innerText="Memoria vacia";
+    }
+}
