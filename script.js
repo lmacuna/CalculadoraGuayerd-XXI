@@ -1,5 +1,6 @@
 let start;
 const num7 = (id)=>{let numero =document.querySelectorAll("button")
+     
     for(let i =0;i<numero.length;i++){
             if(id===numero[i].id&&start===true){
                 n7=document.querySelector("#resultado").innerText+=id;
@@ -9,6 +10,7 @@ const num7 = (id)=>{let numero =document.querySelectorAll("button")
 
 
 const num8 = (id)=>{let numero =document.querySelectorAll("button")
+    
 for(let i =0;i<numero.length;i++){
     if(id===numero[i].id&&start===true){
         n8=document.querySelector("#resultado").innerText+=id;
@@ -17,6 +19,7 @@ for(let i =0;i<numero.length;i++){
 
 }
 const num9 = (id)=>{let numero =document.querySelectorAll("button")
+
 for(let i =0;i<numero.length;i++){
     if(id===numero[i].id&&start===true){
         n9=document.querySelector("#resultado").innerText+=id;
@@ -24,6 +27,7 @@ for(let i =0;i<numero.length;i++){
 }
 }
 const num4 = (id)=>{let numero =document.querySelectorAll("button")
+
 for(let i =0;i<numero.length;i++){
     if(id===numero[i].id&&start===true){
         n4=document.querySelector("#resultado").innerText+=id;
@@ -31,6 +35,7 @@ for(let i =0;i<numero.length;i++){
 }
 }
 const num5 = (id)=>{let numero =document.querySelectorAll("button")
+
 for(let i =0;i<numero.length;i++){
     if(id===numero[i].id&&start===true){
         n5=document.querySelector("#resultado").innerText+=id;
@@ -83,8 +88,9 @@ for(let i =0;i<numero.length;i++){
 
 
 const simbolo=(id)=>{let op= document.querySelectorAll("button")
+
 for(let i=0;i<op.length;i++){
-    if(id===op[i].id&&start===true){
+    if(id===op[i].id&&start===true&&(id==="R"||id==="n")){
        simb= document.querySelector("#resultado").innerText+=id;
     }
 }
@@ -100,7 +106,7 @@ const operacion=()=>{
     
         for(let i =0;i<datos.length;i++){
             
-            if(datos[i]==="+"||datos[i]==="-"||datos[i]==="x"||datos[i]==="/"){
+            if(datos[i]==="+"||datos[i]==="-"||datos[i]==="x"||datos[i]==="/"||datos[i]==='R'||datos[i]==='n²'){
                 break;
             }
                 n1+=datos[i];   
@@ -109,7 +115,7 @@ const operacion=()=>{
         for(let j =n1.length+1;j<datos.length;j++){
             
           
-            if(datos[j]!=="+"||datos[j]!=="-"||datos[j]!=="x"||datos[j]!=="/"){
+            if(datos[j]!=="+"||datos[j]!=="-"||datos[j]!=="x"||datos[j]!=="/"||datos[i]!=="R"||datos[i]!=="n²"){
                 
                 n2+=datos[j];
             }
@@ -139,6 +145,13 @@ const operacion=()=>{
               }else if(datos[i]==="/"){
                   let r =parseFloat(n1)/parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2);
+              }else if(datos[i]==='R'){
+                  
+                  let r=Math.sqrt(n1);
+                  return document.querySelector("#resultado").innerText=r.toFixed(2);
+              }else if(datos[i]==='n'){
+                  let r =Math.pow(n1,2);
+                  return document.querySelector("#resultado").innerText=r;
               }
               console.log(n1)
               console.log(n2); 
@@ -175,7 +188,7 @@ const memoria=()=>{let dato=document.querySelector("#resultado").innerText
           
       }
      else if(dato.length!==0&&localStorage.getItem("dato")===null&&start===true){
-       dato=localStorage.setItem("dato","MR "+dato);
+       dato=localStorage.setItem("dato","MR "+dato);borrar()
       }else if(dato.length!==0&&localStorage.getItem("dato")!==null&&start===true){
           document.querySelector("#resultado").innerText="Memoria llena";
       }
@@ -185,7 +198,7 @@ const recuperarDato=()=>{
     if(start===true&&localStorage.getItem("dato")!==null){
     document.querySelector("#resultado").innerText=dato;
     }if(start===true&&localStorage.getItem("dato")===null){
-        document.querySelector("#resultado").innerText="Vacio";
+        document.querySelector("#resultado").innerText="E"
     }
 }
 const restablecer=()=>{
