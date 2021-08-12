@@ -151,7 +151,7 @@ const operacion=()=>{
                   return document.querySelector("#resultado").innerText=r.toFixed(2);
               }else if(datos[i]==='n'){
                   let r =Math.pow(n1,n2||2);
-                  return document.querySelector("#resultado").innerText=r;
+                  return document.querySelector("#resultado").innerText=r.toFixed(2);
               }
               console.log(n1)
               console.log(n2); 
