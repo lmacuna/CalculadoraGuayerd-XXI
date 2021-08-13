@@ -1,5 +1,5 @@
 let start;
-let cont=1;
+let cont=0;
 const num7 = (id)=>{let numero =document.querySelectorAll("button")
      
     for(let i =0;i<numero.length;i++){
@@ -104,7 +104,7 @@ const simbolo=(id)=>{let op= document.querySelectorAll("button")
 for(let i=0;i<op.length;i++){
     if(id===op[i].id&&start===true&&cont<=1&&(id==="R"||id==="n"||id==="x"||id==="+"||id==="-"||id==="/")){
        simb= document.querySelector("#resultado").innerText+=id;
-       cont++;
+       cont=cont+2;
     }
 }
 
@@ -163,24 +163,24 @@ const operacion=()=>{
               }else if(datos[i]==="-"){
                   let r =parseFloat(n1)-parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2); 
-                   
+
               }else if(datos[i]==="x"){
                   let r =parseFloat(n1)*parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2); 
-                   
+
               }else if(datos[i]==="/"){
                   let r =parseFloat(n1)/parseFloat(n2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2); 
-                   
+
               }else if(datos[i]==='R'){
                   
                   let r=Math.sqrt(n1);
                   return document.querySelector("#resultado").innerText=r.toFixed(2); 
-                   
+
               }else if(datos[i]==='n'){
                   let r =Math.pow(n1,n2||2);
                   return document.querySelector("#resultado").innerText=r.toFixed(2); 
-                   
+
               }
               
               cont=0;
